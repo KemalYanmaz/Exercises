@@ -34,7 +34,7 @@ namespace ConsoleApp1
                 default:
                     break;
             }
-            Console.WriteLine($"{_front} e dondu");
+            //Console.WriteLine($"{_front} e dondu");
 
         }
 

@@ -58,9 +58,10 @@ namespace ConsoleApp1
                     }
                 }
             }
-               
+
+
             char directionFirstDigit = game.GetPlayer().GetDirection().GetDirections().ToString()[0];
-            Console.WriteLine($"{game.GetPlaceX()} {game.GetPlaceY()} {directionFirstDigit}");
+            Console.WriteLine($"({game.GetPlaceX()}, {game.GetPlaceY()}) {directionFirstDigit}");
 
             Console.ReadLine();
         }

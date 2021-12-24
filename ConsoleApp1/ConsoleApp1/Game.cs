@@ -22,7 +22,9 @@ namespace ConsoleApp1
         public Game(int width, int height,int x, int y,Direction direction)
         {
             _board = new Board(width, height);
-            _board.MarkCell(x, y);
+            _placeX = x;
+            _placeY = y;
+            _board.MarkCell(_placeX, _placeY);
             _player = new Player("Player", direction);
         }
 
