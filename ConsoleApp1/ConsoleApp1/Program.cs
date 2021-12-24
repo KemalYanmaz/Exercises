@@ -10,12 +10,16 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            
+
             string[] inputs = Console.ReadLine().Split(' ');
             int width = Convert.ToInt16(inputs[0]);
             int height = Convert.ToInt16(inputs[1]);
+
+            inputs = Console.ReadLine().Split(' ');
+            int x = Convert.ToInt16(inputs[0]);
+            int y = Convert.ToInt16(inputs[1]);
             Direction direction;
-            switch (Console.ReadLine())
+            switch (inputs[2])
             {
                 case "N":
                     direction = new Direction(Directions.North);
@@ -33,7 +37,7 @@ namespace ConsoleApp1
                     direction = new Direction(Directions.North);
                     break;
             }
-            Game game = new Game(width, height, direction);
+            Game game = new Game(width, height, x, y, direction);
             while (true) {
                 string input = Console.ReadLine();
                 for (int i = 0; i < input.Length; i++)

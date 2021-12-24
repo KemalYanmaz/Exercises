@@ -34,6 +34,8 @@ namespace ConsoleApp1
                 default:
                     break;
             }
+            Console.WriteLine($"{_front} e dondu");
+
         }
 
         private void setDirection(Directions front)

@@ -19,9 +19,10 @@ namespace ConsoleApp1
             _player = player;
         }
 
-        public Game(int width, int height,Direction direction)
+        public Game(int width, int height,int x, int y,Direction direction)
         {
             _board = new Board(width, height);
+            _board.MarkCell(x, y);
             _player = new Player("Player", direction);
         }
 
@@ -117,7 +118,7 @@ namespace ConsoleApp1
         {
             if (IsPositive(_placeX))
             {
-                _placeX++;
+                _placeX--;
                 _board.MarkCell(_placeX, _placeY);
             }
             else

@@ -30,8 +30,16 @@ namespace ConsoleApp1
 
         public void MarkCell(int x, int y)
         {
-            FillArea();
-            _area[x, y] = 'X';
+            
+            if (x < _area.GetLength(0) && y < _area.GetLength(1))
+            {
+                FillArea();
+                _area[x, y] = 'X';
+            }
+            else
+            {
+                Console.WriteLine("Hatali Giris");
+            }
         }
 
         public int GetWidth()
@@ -56,6 +64,7 @@ namespace ConsoleApp1
                 }
             }*/
             Console.WriteLine("------------------------------");
+            Console.WriteLine();
             for (int i = _area.GetLength(1)-1; i >= 0 ; i--)
             {
                 Console.WriteLine();
